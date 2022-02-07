@@ -1,10 +1,11 @@
-import { RiotAPI, RiotAPITypes, PlatformId } from '@fightmegg/riot-api'
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const riot_api_1 = require("@fightmegg/riot-api");
 (async () => {
-    const rAPI = new RiotAPI('RGAPI-8824eecb-2766-4c3f-9c07-035a617efa98');
-
+    const rAPI = new riot_api_1.RiotAPI('');
     const summoner = await rAPI.summoner.getBySummonerName({
-        region: PlatformId.EUW1,
-        summonerName: "90Nightmare09",
-      });
-})()
+        region: riot_api_1.PlatformId.EUW1,
+        summonerName: "09Nightmare09",
+    });
+    console.log(summoner);
+})();
